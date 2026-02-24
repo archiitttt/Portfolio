@@ -195,6 +195,10 @@
       .stats-inner { grid-template-columns: repeat(2,1fr); }
       .stat-cell:nth-child(2) { border-right: none; }
     }
+    @media(hover:none),(pointer:coarse){
+      body { cursor: auto; }
+      #cur-dot, #cur-ring { display: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -211,6 +215,7 @@ const { useState, useEffect, useRef } = React;
 /* ── Cursor ── */
 function useCursor() {
   useEffect(() => {
+    if(window.matchMedia('(hover:none),(pointer:coarse)').matches) return;
     const dot = document.getElementById('cur-dot');
     const ring = document.getElementById('cur-ring');
     let mx=0,my=0,rx=0,ry=0,raf;
