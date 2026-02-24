@@ -349,7 +349,7 @@ function Navbar() {
       <div className="nav-links">
         {['Projects','Skills','About','Contact'].map(l=><a key={l} href={`#${l.toLowerCase()}`} className="nav-link">{l}</a>)}
       </div>
-      <a href="mailto:architkaushal2004@gmail.com" className="nav-hire">HIRE ME ↗</a>
+      <a href="mailto:architkaushal2004@gmail.com" className="nav-hire">HIRE ME</a>
     </nav>
   );
 }
@@ -453,7 +453,7 @@ function ProjectCard({p,delay}) {
           {p.highlights.map(h=><span key={h} className="highlight-pill">{h}</span>)}
         </div>
         <div className="proj-tags">{p.tags.map(t=><span key={t} className="proj-tag">{t}</span>)}</div>
-        <a href={p.link} target="_blank" className="proj-link">VIEW LIVE ↗</a>
+        <a href={p.link} target="_blank" className="proj-link">VIEW LIVE</a>
       </div>
     </div>
   );
@@ -550,7 +550,7 @@ function About() {
             </p>
             <div style={{marginTop:'36px',display:'flex',gap:'20px',flexWrap:'wrap'}}>
               {[{l:'GitHub',h:'https://github.com'},{l:'LinkedIn',h:'https://linkedin.com'},{l:'Email',h:'mailto:architkaushal2004@gmail.com'},{l:'Phone',h:'tel:7876062425'}]
-                .map(s=><a key={s.l} href={s.h} target="_blank" className="soc-link">{s.l} ↗</a>)}
+                .map(s=><a key={s.l} href={s.h} target="_blank" className="soc-link">{s.l}</a>)}
             </div>
             <div style={{marginTop:'36px'}}>
               <div style={{fontFamily:'Space Mono',fontSize:'9px',letterSpacing:'.2em',color:'var(--text3)',marginBottom:'14px'}}>RELEVANT COURSEWORK</div>
